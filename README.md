@@ -9,7 +9,7 @@ This project analyzes historical annual and seasonal temperature data for India 
 ```
 climate-analysis/
 ├── data/
-│ └──  TEMP_ANNUAL_MEAN_1901-2021(raw file).csv   # Raw data
+│ └── TEMP_ANNUAL_MEAN_1901-2021(raw file).csv   # Raw data
 │ └── climate_cleaned.csv                        # Cleaned dataset
 ├── charts/
 │ └── (all .png visualizations)                # Power BI visuals

@@ -60,8 +60,21 @@ climate-analysis/
   SELECT FLOOR(YEAR/10)*10 AS decade, ROUND(AVG(ANNUAL_MEAN), 2) AS AVG_TEMP
   FROM demo.climate_cleaned GROUP BY decade;
   ```
-- Seasonal comparisons and winter warming trends
-
+- Seasonal comparisons and winter warming trends:
+  ```sql
+  SELECT YEAR, SUMMER_AVG, MONSOON_AVG,
+(MONSOON_AVG - SUMMER_AVG ) AS difference
+FROM demo.climate_cleaned 
+WHERE SUMMER_AVG IS NOT NULL AND MONSOON_AVG IS NOT NULL
+order by difference desc
+LIMIT 10;
+  ```
+and
+```sql
+  SELECT YEAR, WINTER_AVG 
+FROM demo.climate_cleaned
+order by YEAR
+  ```
 ---
 
 ## 📈 Power BI Dashboard (Highlights)
